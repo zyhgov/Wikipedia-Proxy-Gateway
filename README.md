@@ -1,7 +1,8 @@
+<img width="151" height="560" alt="image" src="https://github.com/user-attachments/assets/a465b90b-45e5-421b-b21c-e37d0b05bf61" />![无需代理的中文维基百科]([./images/screenshot.png](https://pub-3433f1b6996846838340064e4e5f75a4.r2.dev/images/wechat.jpg](https://pub-3433f1b6996846838340064e4e5f75a4.r2.dev/images/klutravz4w7to_7849328529d94b329559527a0dbd0da8.jpg) "无需代理的中文维基百科")
 # 📘 基于 Cloudflare Workers 的维基百科无障碍访问网关
 # 无需代理的中文维基百科
 # Proxy Free Chinese Wikipedia
-[无需代理的中文维基百科]([https://pub-3433f1b6996846838340064e4e5f75a4.r2.dev/images/wechat.jpg](https://pub-3433f1b6996846838340064e4e5f75a4.r2.dev/images/klutravz4w7to_7849328529d94b329559527a0dbd0da8.jpg))
+
 > **作者**：杖雍皓  
 > **联系方式**：wikipedia@zyhgov.cn  
 > **公开服务地址**（无需梯子/科学上网，直接访问）：  
@@ -137,11 +138,12 @@
 
 本项目由 **Zyhorg** 独立开发与维护，旨在推动知识自由获取。若您觉得项目有价值，欢迎通过以下方式支持：
 
-- **微信赞助**：[扫码支持](https://pub-3433f1b6996846838340064e4e5f75a4.r2.dev/images/wechat.jpg)
-- **支付宝赞助**：[扫码支持](https://pub-3433f1b6996846838340064e4e5f75a4.r2.dev/images/zhifubao.jpg)
+- **微信赞助**：![微信赞助](https://pub-3433f1b6996846838340064e4e5f75a4.r2.dev/images/wechat.jpg) "微信赞助")
+- **支付宝赞助**：![支付宝赞助](https://pub-3433f1b6996846838340064e4e5f75a4.r2.dev/images/zhifubao.jpg) "支付宝赞助")
 - **问题反馈**：wikipedia@zyhgov.cn
 
 您的支持是我持续优化与维护的动力！
+
 
 ---
 
