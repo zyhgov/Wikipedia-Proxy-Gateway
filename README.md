@@ -1,4 +1,4 @@
-![无需代理的中文维基百科](https://pub-3433f1b6996846838340064e4e5f75a4.r2.dev/images/klutravz4w7to_7849328529d94b329559527a0dbd0da8.jpg) "无需代理的中文维基百科")
+![无需代理的中文维基百科](https://pub-3433f1b6996846838340064e4e5f75a4.r2.dev/images/klutravz4w7to_7849328529d94b329559527a0dbd0da8.jpg) 
 # 📘 基于 Cloudflare Workers 的维基百科无障碍访问网关
 # 无需代理的中文维基百科
 # Proxy Free Chinese Wikipedia
@@ -141,25 +141,16 @@
 本项目由 **Zyhorg** 独立开发与维护，旨在推动知识自由获取。若您觉得项目有价值，欢迎通过以下方式支持：
 
 - **微信赞助**  
-  ![微信赞助二维码](https://pub-3433f1b6996846838340064e4e5f75a4.r2.dev/images/wechat.jpg  )
+  <img src="https://pub-3433f1b6996846838340064e4e5f75a4.r2.dev/images/wechat.jpg" alt="微信赞助二维码" style="zoom: 25%;" />
 
 - **支付宝赞助**  
-  ![支付宝赞助二维码](https://pub-3433f1b6996846838340064e4e5f75a4.r2.dev/images/zhifubao.jpg  )
+  <img src="https://pub-3433f1b6996846838340064e4e5f75a4.r2.dev/images/zhifubao.jpg" alt="支付宝赞助二维码" style="zoom:25%;" />
 
 - **问题反馈**：📧 [wikipedia@zyhgov.cn](mailto:wikipedia@zyhgov.cn)
 
 > 💡 您的支持是我持续优化与维护本项目的最大动力！
 
 ---
-
-✅ **说明**：
-
-- 图片链接后多余的空格和引号已清理，避免渲染异常。
-- 添加了 `📧` 邮件图标与 `mailto:` 链接，提升交互体验。
-- 使用引用块强调“支持动力”，增强情感共鸣。
-- 整体结构清晰，视觉层次分明，适合 GitHub / 技术文档场景。
-
-直接使用即可，效果专业美观！
 
 ## 📜 版权声明
 
