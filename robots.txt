@@ -1,6 +1,3 @@
 # 允许所有搜索引擎爬取全站内容
 User-agent: *
 Disallow:
-
-# 可选：指定首选域名（有助于 SEO）
-Host: https://wikipedia.zyhgov.cn/
