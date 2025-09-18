@@ -1,0 +1,75 @@
+        @font-face {
+            font-family: 'OpenAISans-Medium';
+            src: url('/font/openai/OpenAISans-Medium.woff2') format('woff2');
+        }
+        @font-face {
+            font-family: 'OpenAISans-Regular';
+            src: url('/font/openai/OpenAISans-Regular.woff2') format('woff2');
+        }
+        @font-face {
+            font-family: 'OpenAISans-Semibold';
+            src: url('/font/openai/OpenAISans-Semibold.woff2') format('woff2');
+        }
+        
+        body {
+            font-family: 'OpenAISans-Regular', sans-serif;
+            background-color: #0f172a;
+            color: #e2e8f0;
+        }
+        
+        .tech-border {
+            border: 1px solid #1e293b;
+            box-shadow: 0 0 15px rgba(74, 222, 128, 0.1);
+        }
+        
+        .status-light {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            display: inline-block;
+            margin-right: 8px;
+            box-shadow: 0 0 5px currentColor;
+        }
+        
+        .status-light.gray {
+            background-color: #64748b;
+        }
+        
+        .status-light.yellow {
+            background-color: #facc15;
+        }
+        
+        .status-light.green {
+            background-color: #4ade80;
+        }
+        
+        .glow-text {
+            text-shadow: 0 0 8px rgba(74, 222, 128, 0.6);
+        }
+        
+        .tech-button {
+            background: linear-gradient(135deg, #1e40af 0%, #1e3a8a 100%);
+            border: 1px solid #3b82f6;
+            transition: all 0.3s ease;
+        }
+        
+        .tech-button:hover {
+            background: linear-gradient(135deg, #1e3a8a 0%, #1e40af 100%);
+            box-shadow: 0 0 15px rgba(59, 130, 246, 0.5);
+        }
+        
+        .pulse-animation {
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0% {
+                box-shadow: 0 0 0 0 rgba(74, 222, 128, 0.4);
+            }
+            70% {
+                box-shadow: 0 0 0 10px rgba(74, 222, 128, 0);
+            }
+            100% {
+                box-shadow: 0 0 0 0 rgba(74, 222, 128, 0);
+            }
+        }
