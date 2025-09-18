@@ -1,4 +1,4 @@
-<img width="151" height="560" alt="image" src="https://github.com/user-attachments/assets/a465b90b-45e5-421b-b21c-e37d0b05bf61" />![无需代理的中文维基百科]([./images/screenshot.png](https://pub-3433f1b6996846838340064e4e5f75a4.r2.dev/images/wechat.jpg](https://pub-3433f1b6996846838340064e4e5f75a4.r2.dev/images/klutravz4w7to_7849328529d94b329559527a0dbd0da8.jpg) "无需代理的中文维基百科")
+![无需代理的中文维基百科](https://pub-3433f1b6996846838340064e4e5f75a4.r2.dev/images/klutravz4w7to_7849328529d94b329559527a0dbd0da8.jpg) "无需代理的中文维基百科")
 # 📘 基于 Cloudflare Workers 的维基百科无障碍访问网关
 # 无需代理的中文维基百科
 # Proxy Free Chinese Wikipedia
@@ -132,20 +132,34 @@
 3. 按本文档“部署流程”配置 DNS 与路由
 4. （可选）配置 Access 策略增强安全性
 
+当然可以！以下是格式规范、排版美观的 Markdown 版本，可直接复制粘贴到你的文档或 README 中：
+
 ---
 
 ## 🤝 致谢与支持
 
 本项目由 **Zyhorg** 独立开发与维护，旨在推动知识自由获取。若您觉得项目有价值，欢迎通过以下方式支持：
 
-- **微信赞助**：![微信赞助](https://pub-3433f1b6996846838340064e4e5f75a4.r2.dev/images/wechat.jpg) "微信赞助")
-- **支付宝赞助**：![支付宝赞助](https://pub-3433f1b6996846838340064e4e5f75a4.r2.dev/images/zhifubao.jpg) "支付宝赞助")
-- **问题反馈**：wikipedia@zyhgov.cn
+- **微信赞助**  
+  ![微信赞助二维码](https://pub-3433f1b6996846838340064e4e5f75a4.r2.dev/images/wechat.jpg  )
 
-您的支持是我持续优化与维护的动力！
+- **支付宝赞助**  
+  ![支付宝赞助二维码](https://pub-3433f1b6996846838340064e4e5f75a4.r2.dev/images/zhifubao.jpg  )
 
+- **问题反馈**：📧 [wikipedia@zyhgov.cn](mailto:wikipedia@zyhgov.cn)
+
+> 💡 您的支持是我持续优化与维护本项目的最大动力！
 
 ---
+
+✅ **说明**：
+
+- 图片链接后多余的空格和引号已清理，避免渲染异常。
+- 添加了 `📧` 邮件图标与 `mailto:` 链接，提升交互体验。
+- 使用引用块强调“支持动力”，增强情感共鸣。
+- 整体结构清晰，视觉层次分明，适合 GitHub / 技术文档场景。
+
+直接使用即可，效果专业美观！
 
 ## 📜 版权声明
 
