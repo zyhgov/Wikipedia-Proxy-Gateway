@@ -6,7 +6,7 @@
 > **作者**：杖雍皓  
 > **联系方式**：wikipedia@zyhorg.ac.cn  
 > **公开服务地址**（无需梯子/科学上网，直接访问）：  
-> - 主引导页：https://zyhorg.ac.cn/Wikipedia/  
+> - 主引导页：https://wikipedia.zyhorg.cn/  
 > - 核心服务入口：https://wikipedia.zyhorg.ac.cn/
 
 ---
@@ -120,7 +120,7 @@
 
 无需部署，直接访问以下地址即可体验完整功能：
 
-- 引导页（含说明）：https://zyhorg.ac.cn/Wikipedia/
+- 引导页（含说明）：https://wikipedia.zyhorg.cn/
 - 核心服务：https://wikipedia.zyhorg.ac.cn/
 
 > ⚠️ 服务基于 Cloudflare 免费套餐，每日限额 100,000 次请求。配额耗尽时服务将自动暂停，次日恢复。
