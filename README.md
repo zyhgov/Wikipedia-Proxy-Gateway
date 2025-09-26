@@ -4,10 +4,10 @@
 # Proxy Free Chinese Wikipedia
 
 > **作者**：杖雍皓  
-> **联系方式**：wikipedia@zyhgov.cn  
+> **联系方式**：wikipedia@zyhorg.ac.cn  
 > **公开服务地址**（无需梯子/科学上网，直接访问）：  
 > - 主引导页：https://zyhorg.ac.cn/Wikipedia/  
-> - 核心服务入口：https://vpnwiki.zyhgov.cn/
+> - 核心服务入口：https://wikipedia.zyhorg.ac.cn/
 
 ---
 
@@ -20,7 +20,7 @@
 ## ⚙️ 基础设施要求
 
 1. **Cloudflare 账户**（免费版即可）
-2. **已接入 Cloudflare 的域名**（如 `zyhgov.cn`）
+2. **已接入 Cloudflare 的域名**（如 `zyhorg.ac.cn`）
 3. **启用 Workers 与 Pages 服务**
 4. **配置 DNS + 路由 + Access 策略**
 
@@ -45,7 +45,7 @@
 1. 在 Worker 编辑页面，进入 **Triggers** → **Routes**
 2. 添加自定义路由：
    ```
-   https://vpnwiki.zyhgov.cn/*
+   https://wikipedia.zyhorg.ac.cn/*
    ```
 3. 保存。此操作将把所有匹配该路径的请求交由 Worker 处理。
 
@@ -61,7 +61,7 @@
    - **Target**: `your-worker-name.your-subdomain.workers.dev`（上一步部署后系统生成的临时地址）
    - **Proxy status**: Proxied（橙色云朵）
 
-> ✅ 验证：访问 `https://vpnwiki.zyhgov.cn/` 应返回维基百科首页，证明路由与 Worker 生效。
+> ✅ 验证：访问 `https://wikipedia.zyhorg.ac.cn/` 应返回维基百科首页，证明路由与 Worker 生效。
 
 ---
 
@@ -72,7 +72,7 @@
 1. 进入 **Zero Trust** → **Access** → **Applications**
 2. 创建新应用：
    - **Name**: Wiki Proxy Access Control
-   - **Domain**: `vpnwiki.zyhgov.cn`
+   - **Domain**: `wikipedia.zyhorg.ac.cn`
 3. 配置策略（Policy）：
    - **Action**: Allow
    - **Include** → **Any valid service token**（或按需设置 IP、国家、设备等条件）
@@ -121,7 +121,7 @@
 无需部署，直接访问以下地址即可体验完整功能：
 
 - 引导页（含说明）：https://zyhorg.ac.cn/Wikipedia/
-- 核心服务：https://vpnwiki.zyhgov.cn/
+- 核心服务：https://wikipedia.zyhorg.ac.cn/
 
 > ⚠️ 服务基于 Cloudflare 免费套餐，每日限额 100,000 次请求。配额耗尽时服务将自动暂停，次日恢复。
 
@@ -146,7 +146,7 @@
 - **支付宝赞助**  
   <img src="https://pub-3433f1b6996846838340064e4e5f75a4.r2.dev/images/zhifubao.jpg" alt="支付宝赞助二维码" style="zoom:25%;" />
 
-- **问题反馈**：📧 [wikipedia@zyhgov.cn](mailto:wikipedia@zyhgov.cn)
+- **问题反馈**：📧 [wikipedia@zyhorg.ac.cn](mailto:wikipedia@zyhorg.ac.cn)
 
 > 💡 您的支持是我持续优化与维护本项目的最大动力！
 
@@ -154,12 +154,12 @@
 
 ## 📜 版权声明
 
-© 2025 Zyhorg. 保留所有权利。  
+© 2025 杖雍皓. 保留所有权利。  
 代码采用 MIT 许可证开源，使用时请保留原作者署名。
 
 ---
 
-> **海纳百川，有容纳大。**  
+> **海纳百川，有容乃大。**  
 > —— 杖雍皓
 
 ---
