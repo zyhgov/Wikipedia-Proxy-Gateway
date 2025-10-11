@@ -283,15 +283,80 @@
             <p>本站对争议保留内容持审慎态度，不代表本站立场</p>
             <p>联合库UNHub （杖雍皓）保留所有权利</p>
             <p>联系邮箱 : <a href="mailto:wikipedia@zyhorg.ac.cn" class="text-blue-400 hover:underline">wikipedia@zyhorg.ac.cn</a></p>
+            <p>UNHub Wikipedia 交流群 : 2158058819</p>
             <p class="mt-1">© 2025 联合库UNHub 维基百科Wikipedia - 通过Cloudflare Workers技术实现</p>
         </div>
     </footer>
 
     <script src="/script.js"></script>
+<div id="feedback-modal-backdrop" class="fixed inset-0 bg-black bg-opacity-70 backdrop-blur-sm z-50 flex items-center justify-center hidden" onclick="closeFeedbackModal()">
+    
+    <div id="feedback-modal" class="bg-gray-800/80 backdrop-blur-xl p-8 rounded-3xl shadow-2xl w-full max-w-sm mx-4 transform transition-all duration-300 scale-95 opacity-0 relative" onclick="event.stopPropagation()">
+        
+        <button onclick="closeFeedbackModal()" class="absolute top-4 right-4 text-gray-400 hover:text-white transition-colors p-1 rounded-full bg-gray-700/50 hover:bg-gray-600/70 z-10">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+        </button>
+
+        <div class="text-center pt-2 pb-1">
+            
+            <h2 class="text-3xl font-extrabold text-white mb-2" style="font-family: 'OpenAISans-Semibold'">
+                共创，只为更好体验
+            </h2>
+            
+            <p class="text-md text-blue-400 font-medium mb-6">
+                你的洞察，至关重要。
+            </p>
+
+            <div class="flex justify-center mb-5">
+                <img src="/qq.png" alt="维基百科服务交流群二维码" class="w-44 h-44 rounded-xl border-4 border-gray-700 shadow-xl object-cover">
+            </div>
+
+            <p class="text-sm text-gray-400 leading-normal mt-2">
+                加入 UNHub Wikipedia 交流群<br>
+                群号：<strong class="text-gray-200">2158058819</strong><br>
+                扫码，参与共创未来。
+            </p>
+        </div>
+    </div>
+</div>
+<script>
+  // 获取弹窗元素
+const modalBackdrop = document.getElementById('feedback-modal-backdrop');
+const modal = document.getElementById('feedback-modal');
+
+// 打开弹窗函数
+function openFeedbackModal() {
+    modalBackdrop.classList.remove('hidden');
+    // 使用 setTimeout 延迟添加动画类，确保 backdrop 先显示
+    setTimeout(() => {
+        modal.classList.remove('scale-95', 'opacity-0');
+        modal.classList.add('scale-100', 'opacity-100');
+    }, 50);
+}
+
+// 关闭弹窗函数
+function closeFeedbackModal() {
+    modal.classList.remove('scale-100', 'opacity-100');
+    modal.classList.add('scale-95', 'opacity-0');
+    // 延迟隐藏 backdrop，等待动画结束
+    setTimeout(() => {
+        modalBackdrop.classList.add('hidden');
+    }, 300); // 300ms 应该匹配你的 CSS transition duration
+}
+
+// 页面加载完成后，1秒后自动弹出
+window.addEventListener('load', () => {
+    setTimeout(() => {
+        // 只有当弹窗处于隐藏状态时才弹出，防止重复执行
+        if (modalBackdrop.classList.contains('hidden')) {
+            openFeedbackModal();
+        }
+    }, 1000); // 1秒延迟
+});
+</script>
 </body>
 
 </html>
-
 
 
 
