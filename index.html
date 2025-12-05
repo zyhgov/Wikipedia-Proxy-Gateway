@@ -43,144 +43,109 @@
 <script>LA.init({id:"Kg8KQJs3VUpgJFYj",ck:"Kg8KQJs3VUpgJFYj",autoTrack:true,hashMode:true,screenRecord:true})</script>
     
 </head>
-<body class="min-h-screen flex flex-col">
-    <header class="py-6 tech-border border-b border-gray-800">
-        <div class="container mx-auto px-4">
-            <img src="/logo.png" alt="中文维基百科Logo" class="h-16 mr-4">
-            <h1 class="text-3xl md:text-4xl font-bold text-center glow-text" style="font-family: 'OpenAISans-Semibold'">
-                无需代理的中文维基百科 <br />
-                Proxy Free Chinese Wikipedia
-            </h1>
-            <p class="text-center mt-2 text-blue-300" style="font-family: 'OpenAISans-Medium'">
-                维基百科，自由的百科全书 <br>
-                人人可查看、编辑与分享的自由百科全书 <br />
-                通过Cloudflare Workers实现中国大陆网络环境直接访问
+<body class="min-h-screen flex flex-col bg-gray-900 text-white">
+  <header class="py-6 border-b border-gray-800">
+    <div class="container mx-auto px-4 text-center">
+      <img src="/logo.png" alt="中文维基百科Logo" class="h-16 mx-auto mb-4" />
+      <h1 class="text-3xl md:text-4xl font-bold" style="font-family: 'OpenAISans-Semibold'">
+        无需代理的中文维基百科 <br />
+        Proxy Free Chinese Wikipedia
+      </h1>
+      <p class="mt-2 text-blue-300" style="font-family: 'OpenAISans-Medium'">
+        维基百科，自由的百科全书 <br>
+        人人可查看、编辑与分享的自由百科全书 <br />
+        通过 Cloudflare Workers 实现中国大陆网络环境直接访问
+      </p>
+    </div>
+  </header>
+
+  <main class="flex-grow container mx-auto px-4 py-8">
+    <div class="max-w-5xl mx-auto tech-border rounded-2xl p-8 bg-gradient-to-br from-gray-900/60 to-gray-800/40 backdrop-blur-xl shadow-2xl border border-gray-700/50 hover:shadow-blue-900/20 transition-all duration-500">
+      <div class="flex flex-col lg:flex-row items-center justify-between gap-10">
+        <div class="flex-1 space-y-8">
+          <div>
+            <h2 class="text-3xl md:text-4xl font-bold bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent mb-4" style="font-family: 'OpenAISans-Semibold'">
+              海纳百川 · 有容乃大
+            </h2>
+            <p class="text-lg text-gray-300 leading-relaxed">
+              我们通过先进的 Cloudflare Workers 边缘计算技术，构建了一个稳定、高速、零延迟的中文维基百科访问网关。
+              无需任何代理工具，即可自由探索人类知识的海洋。
             </p>
-            
+          </div>
+
+          <!-- 特性列表（略，保留原结构） -->
+          <ul class="space-y-5">
+            <li class="flex items-start group">
+              <div class="p-1.5 rounded-full bg-green-500/20 mr-3 mt-1.5 group-hover:bg-green-500/30 transition-colors">
+                <svg class="w-4 h-4 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                </svg>
+              </div>
+              <span class="text-gray-200 group-hover:text-green-300 transition-colors">
+                <strong class="text-white">零配置访问</strong> — 无需安装 VPN、代理或任何插件，打开即用，纯净体验。
+              </span>
+            </li>
+            <li class="flex items-start group">
+              <div class="p-1.5 rounded-full bg-blue-500/20 mr-3 mt-1.5 group-hover:bg-blue-500/30 transition-colors">
+                <svg class="w-4 h-4 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                </svg>
+              </div>
+              <span class="text-gray-200 group-hover:text-blue-300 transition-colors">
+                <strong class="text-white">全球边缘加速</strong> — 依托 Cloudflare 300+ 全球节点，智能路由，毫秒响应，告别卡顿。
+              </span>
+            </li>
+            <li class="flex items-start group">
+              <div class="p-1.5 rounded-full bg-purple-500/20 mr-3 mt-1.5 group-hover:bg-purple-500/30 transition-colors">
+                <svg class="w-4 h-4 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                </svg>
+              </div>
+              <span class="text-gray-200 group-hover:text-purple-300 transition-colors">
+                <strong class="text-white">内容实时同步</strong> — 与维基百科官方源站保持 100% 内容一致，无缓存延迟，知识永新。
+              </span>
+            </li>
+            <li class="flex items-start group">
+              <div class="p-1.5 rounded-full bg-orange-500/20 mr-3 mt-1.5 group-hover:bg-orange-500/30 transition-colors">
+                <svg class="w-4 h-4 text-orange-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                </svg>
+              </div>
+              <span class="text-gray-200 group-hover:text-orange-300 transition-colors">
+                <strong class="text-white">完整功能支持</strong> — 搜索、编辑预览、图片加载、多语言切换等功能一应俱全，体验与原站无异。
+              </span>
+            </li>
+          </ul>
+
+          <div class="flex items-center mt-6 p-4 rounded-xl bg-gray-800/50 border border-gray-700/80">
+            <span class="w-3 h-3 rounded-full bg-green-500 mr-3"></span>
+            <span class="text-sm text-gray-300 font-medium">服务状态：正常运行中</span>
+          </div>
         </div>
-    </header>
 
-    <main class="flex-grow container mx-auto px-4 py-8">
-<div class="max-w-5xl mx-auto tech-border rounded-2xl p-8 bg-gradient-to-br from-gray-900/60 to-gray-800/40 backdrop-blur-xl shadow-2xl border border-gray-700/50 hover:shadow-blue-900/20 transition-all duration-500">
-
-  <!-- 主内容区 -->
-  <div class="flex flex-col lg:flex-row items-center justify-between gap-10">
-
-    <!-- 左侧：文案与特性 -->
-    <div class="flex-1 space-y-8">
-      <div>
-        <h2 class="text-3xl md:text-4xl font-bold bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent mb-4" style="font-family: 'OpenAISans-Semibold'">
-          海纳百川 · 有容乃大
-        </h2>
-        <p class="text-lg text-gray-300 leading-relaxed">
-          我们通过先进的 Cloudflare Workers 边缘计算技术，构建了一个稳定、高速、零延迟的中文维基百科访问网关。无需任何代理工具，即可自由探索人类知识的海洋。
-        </p>
-      </div>
-
-      <!-- 特性列表 -->
-      <ul class="space-y-5">
-        <li class="flex items-start group">
-          <div class="p-1.5 rounded-full bg-green-500/20 mr-3 mt-1.5 group-hover:bg-green-500/30 transition-colors">
-            <svg class="w-4 h-4 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+        <div class="w-full lg:w-auto flex flex-col items-center space-y-6">
+          <!-- ⚠️ 改为按钮，点击触发法律声明弹窗 -->
+          <button id="visit-btn" class="tech-button bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-500 hover:to-purple-500 text-white font-semibold py-4 px-8 rounded-xl flex items-center shadow-lg hover:shadow-2xl transform hover:scale-105 transition-all duration-300 group">
+            <svg class="w-5 h-5 mr-2 group-hover:rotate-12 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"></path>
             </svg>
-          </div>
-          <span class="text-gray-200 group-hover:text-green-300 transition-colors">
-            <strong class="text-white">零配置访问</strong> — 无需安装 VPN、代理或任何插件，打开即用，纯净体验。
-          </span>
-        </li>
-        <li class="flex items-start group">
-          <div class="p-1.5 rounded-full bg-blue-500/20 mr-3 mt-1.5 group-hover:bg-blue-500/30 transition-colors">
-            <svg class="w-4 h-4 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+            <span class="text-lg">立即访问</span>
+          </button>
+          <p class="text-xs text-gray-400">点击将在新标签页打开维基百科</p>
+
+          <div class="flex items-center space-x-2">
+            <svg class="w-5 h-5 text-gray-400" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"></path>
             </svg>
+            <a href="https://github.com/zyhgov/Wikipedia-Proxy-Gateway" target="_blank" class="text-gray-300 hover:text-white font-medium text-sm transition-colors">
+              查看 GitHub 开源项目 →
+            </a>
           </div>
-          <span class="text-gray-200 group-hover:text-blue-300 transition-colors">
-            <strong class="text-white">全球边缘加速</strong> — 依托 Cloudflare 300+ 全球节点，智能路由，毫秒响应，告别卡顿。
-          </span>
-        </li>
-        <li class="flex items-start group">
-          <div class="p-1.5 rounded-full bg-purple-500/20 mr-3 mt-1.5 group-hover:bg-purple-500/30 transition-colors">
-            <svg class="w-4 h-4 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-            </svg>
-          </div>
-          <span class="text-gray-200 group-hover:text-purple-300 transition-colors">
-            <strong class="text-white">内容实时同步</strong> — 与维基百科官方源站保持 100% 内容一致，无缓存延迟，知识永新。
-          </span>
-        </li>
-        <li class="flex items-start group">
-          <div class="p-1.5 rounded-full bg-orange-500/20 mr-3 mt-1.5 group-hover:bg-orange-500/30 transition-colors">
-            <svg class="w-4 h-4 text-orange-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-            </svg>
-          </div>
-          <span class="text-gray-200 group-hover:text-orange-300 transition-colors">
-            <strong class="text-white">完整功能支持</strong> — 搜索、编辑预览、图片加载、多语言切换等功能一应俱全，体验与原站无异。
-          </span>
-        </li>
-      </ul>
-
-      <!-- 服务状态 -->
-      <div class="flex items-center mt-6 p-4 rounded-xl bg-gray-800/50 border border-gray-700/80">
-        <span id="status-light" class="status-light gray w-3 h-3 rounded-full mr-3"></span>
-        <span id="status-text" class="text-sm text-gray-300 font-medium">服务状态检测中，请稍候...</span>
-      </div>
-    </div>
-
-    <!-- 右侧：操作区 -->
-    <div class="w-full lg:w-auto flex flex-col items-center space-y-6">
-      <!-- 主按钮 -->
-      <a href="https://wikipedia.zyhorg.ac.cn/" target="_blank" class="tech-button bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-500 hover:to-purple-500 text-white font-semibold py-4 px-8 rounded-xl flex items-center shadow-lg hover:shadow-2xl transform hover:scale-105 transition-all duration-300 group">
-        <svg class="w-5 h-5 mr-2 group-hover:rotate-12 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"></path>
-        </svg>
-        <span class="text-lg">立即访问中文维基百科</span>
-      </a>
-      <p class="text-xs text-gray-400">点击将在新标签页打开维基百科</p>
-
-      <!-- GitHub 链接 -->
-      <div class="flex items-center space-x-2">
-        <svg class="w-5 h-5 text-gray-400 flex-shrink-0" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-          <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"></path>
-        </svg>
-        <a href="https://github.com/zyhgov/Wikipedia-Proxy-Gateway" target="_blank" class="text-gray-300 hover:text-white font-medium text-sm transition-colors whitespace-nowrap">
-          查看 GitHub 开源项目 →
-        </a>
-      </div>
-
-      <!-- 赞助提示（悬停展开二维码） -->
-      <div class="text-center p-5 rounded-xl bg-gray-800/40 border border-gray-700/60 group relative w-full max-w-xs">
-        <p class="text-xs text-gray-400 mb-3">
-          ❤️ 本项目由 <strong class="text-blue-400">杖雍皓</strong> 个人维护，非商业用途。<br>
-          <span class="underline cursor-pointer font-medium text-blue-300 group-hover:text-blue-200 transition-colors">悬停查看赞助方式 →</span>
-        </p>
-
-        <!-- 悬停展开的二维码容器 -->
-        <div class="opacity-0 group-hover:opacity-100 max-h-0 group-hover:max-h-80 transition-all duration-500 ease-in-out overflow-hidden flex flex-col md:flex-row items-center justify-center gap-5 mt-4">
-          <!-- 微信二维码 -->
-<!-- 微信二维码 -->
-<div class="flex flex-col items-center space-y-2">
-  <div class="text-xs text-gray-300 font-medium">微信赞助</div>
-  <img src="/wechat.png" alt="微信赞助二维码" class="max-w-32 max-h-32 w-auto h-auto rounded-xl border-2 border-gray-600 shadow-lg hover:shadow-xl transition-shadow">
-</div>
-
-<!-- 支付宝二维码 -->
-<div class="flex flex-col items-center space-y-2">
-  <div class="text-xs text-gray-300 font-medium">支付宝赞助</div>
-  <img src="/zhifubao.jpg" alt="支付宝赞助二维码" class="max-w-32 max-h-32 w-auto h-auto rounded-xl border-2 border-gray-600 shadow-lg hover:shadow-xl transition-shadow">
-</div>
-          <p class="text-[11px] text-gray-500 mt-3 max-w-xs text-center px-2">
-            扫码支持，可以请我喝一杯咖啡让我继续肝代码。
-          </p>
         </div>
       </div>
     </div>
-
-  </div>
-</div>
-
-<div class="mt-8 grid grid-cols-1 md:grid-cols-3 gap-6">
+	
+	<div class="mt-8 grid grid-cols-1 md:grid-cols-3 gap-6">
 
     <!-- 安全可靠 -->
     <div class="tech-border rounded-xl p-6 bg-gray-900/50 backdrop-blur-sm hover:bg-gray-900/70 transition-all duration-300">
@@ -274,88 +239,184 @@
     </div>
 
 </div>
-    </main>
+	
+  </main>
 
-    <footer class="py-4 tech-border border-t border-gray-800 text-center text-sm text-gray-500">
-        <div class="container mx-auto px-4">
-            <p><script id="LA-DATA-WIDGET" crossorigin="anonymous" charset="UTF-8" src="https://v6-widget.51.la/v6/Kg8KQJs3VUpgJFYj/quote.js?theme=,,#F5F5F7,#F5F5F7,,,14&f=14&display=0,1,0,0,0,0,0,1"></script></p>
-            <p>本服务仅提供中文维基百科的反向代理访问，所有内容版权归维基媒体基金会所有</p>
-            <p>本站对争议保留内容持审慎态度，不代表本站立场</p>
-            <p>联合库UNHub （杖雍皓）保留所有权利</p>
-            <p>联系邮箱 : <a href="mailto:wikipedia@zyhorg.ac.cn" class="text-blue-400 hover:underline">wikipedia@zyhorg.ac.cn</a></p>
-            <p>UNHub Wikipedia 交流群 : 2158058819</p>
-            <p class="mt-1">© 2025 联合库UNHub 维基百科Wikipedia - 通过Cloudflare Workers技术实现</p>
-        </div>
-    </footer>
-
-    <script src="/script.js"></script>
-<div id="feedback-modal-backdrop" class="fixed inset-0 bg-black bg-opacity-70 backdrop-blur-sm z-50 flex items-center justify-center hidden" onclick="closeFeedbackModal()">
-    
+  <!-- ✅ 弹窗 1：页面加载后自动弹出（反馈/交流群） -->
+  <div id="feedback-modal-backdrop" class="fixed inset-0 bg-black bg-opacity-70 backdrop-blur-sm z-50 flex items-center justify-center hidden" onclick="closeFeedbackModal()">
     <div id="feedback-modal" class="bg-gray-800/80 backdrop-blur-xl p-8 rounded-3xl shadow-2xl w-full max-w-sm mx-4 transform transition-all duration-300 scale-95 opacity-0 relative" onclick="event.stopPropagation()">
-        
-        <button onclick="closeFeedbackModal()" class="absolute top-4 right-4 text-gray-400 hover:text-white transition-colors p-1 rounded-full bg-gray-700/50 hover:bg-gray-600/70 z-10">
-            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
-        </button>
-
-        <div class="text-center pt-2 pb-1">
-            
-            <h2 class="text-3xl font-extrabold text-white mb-2" style="font-family: 'OpenAISans-Semibold'">
-                共创，只为更好体验
-            </h2>
-            
-            <p class="text-md text-blue-400 font-medium mb-6">
-                你的洞察，至关重要。
-            </p>
-
-            <div class="flex justify-center mb-5">
-                <img src="/qq.png" alt="维基百科服务交流群二维码" class="w-44 h-44 rounded-xl border-4 border-gray-700 shadow-xl object-cover">
-            </div>
-
-            <p class="text-sm text-gray-400 leading-normal mt-2">
-                加入 UNHub Wikipedia 交流群<br>
-                群号：<strong class="text-gray-200">2158058819</strong><br>
-                扫码，参与共创未来。
-            </p>
+      <button onclick="closeFeedbackModal()" class="absolute top-4 right-4 text-gray-400 hover:text-white transition-colors p-1 rounded-full bg-gray-700/50 hover:bg-gray-600/70 z-10">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+        </svg>
+      </button>
+      <div class="text-center pt-2 pb-1">
+        <h2 class="text-3xl font-extrabold text-white mb-2" style="font-family: 'OpenAISans-Semibold'">共创，只为更好体验</h2>
+        <p class="text-md text-blue-400 font-medium mb-6">你的洞察，至关重要。</p>
+        <div class="flex justify-center mb-5">
+          <img src="/qq.png" alt="维基百科服务交流群二维码" class="w-44 h-44 rounded-xl border-4 border-gray-700 shadow-xl object-cover">
         </div>
+        <p class="text-sm text-gray-400 leading-normal mt-2">
+          加入 UNHub Wikipedia 交流群<br>
+          群号：<strong class="text-gray-200">2158058819</strong><br>
+          扫码，参与共创未来。
+        </p>
+      </div>
     </div>
+  </div>
+
+  <!-- ✅ 弹窗 2：点击“立即访问”后弹出（法律声明） -->
+<!-- 法律与使用免责声明 + Turnstile 验证弹窗 -->
+<div id="disclaimer-modal-backdrop" class="fixed inset-0 bg-black bg-opacity-70 backdrop-blur-sm z-50 flex items-center justify-center hidden" onclick="closeDisclaimerModal()">
+  <div class="bg-gray-800/90 backdrop-blur-xl p-6 md:p-8 rounded-2xl shadow-2xl w-full max-w-md mx-4 relative" onclick="event.stopPropagation()">
+    <h2 class="text-2xl font-bold text-white mb-4 text-center">法律与使用免责声明</h2>
+    <div class="text-sm text-gray-300 leading-relaxed mb-5 space-y-3">
+      <p>
+        本服务系基于个人学习与技术研究目的所构建的实验性网络工具，项目名称为“中文维基百科 Proxy Gateway”。<strong>不对原始内容进行存储、本地缓存、修改或任何形式的再分发</strong>，所有请求均通过 Cloudflare Workers 边缘计算平台进行合规性中转，未部署任何境内服务器。
+      </p>
+      <p>
+        维基百科（Wikipedia）系由维基媒体基金会（Wikimedia Foundation）及其全球志愿者社区独立维护的开放知识平台，其内容生成机制与立场不代表本服务提供方的观点。<strong>本服务明确声明：不认可、不背书、亦不对维基百科中的任何信息内容承担法律责任</strong>。
+      </p>
+      <p>
+        用户在使用本服务前，应充分知悉并理解访问境外互联网内容可能涉及的法律、安全及合规风险。<strong>一旦使用本服务，即视为您已完全理解上述风险，并自愿承担由此产生的一切后果与责任</strong>。
+      </p>
+    </div>
+
+    <!-- 输入框 -->
+    <div class="mb-5">
+      <label for="disclaimer-input" class="block text-sm text-gray-400 mb-2">请完整输入以下声明以确认您已阅读并接受上述条款：</label>
+      <input
+        type="text"
+        id="disclaimer-input"
+        placeholder="我明白法律风险，我自愿承担一切后果"
+        class="w-full px-4 py-2 bg-gray-700 border border-gray-600 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500"
+      />
+    </div>
+
+    <!-- Turnstile 验证区域（初始隐藏） -->
+    <div id="turnstile-container" class="mb-5 hidden">
+      <div class="text-sm text-gray-400 mb-2">请完成人机验证：</div>
+      <!-- Turnstile 将在此处渲染 -->
+      <div id="cf-turnstile" class="flex justify-center"></div>
+    </div>
+
+    <!-- 按钮组 -->
+    <div class="flex justify-between">
+      <button onclick="closeDisclaimerModal()" class="px-4 py-2 text-gray-400 hover:text-white transition-colors">取消</button>
+      <button id="confirm-btn" disabled onclick="showTurnstile()" class="px-6 py-2 bg-blue-600 hover:bg-blue-500 text-white font-medium rounded-lg disabled:opacity-50 disabled:cursor-not-allowed transition-colors">
+        继续访问
+      </button>
+    </div>
+  </div>
 </div>
-<script>
-  // 获取弹窗元素
-const modalBackdrop = document.getElementById('feedback-modal-backdrop');
-const modal = document.getElementById('feedback-modal');
 
-// 打开弹窗函数
+  <footer class="py-4 border-t border-gray-800 text-center text-sm text-gray-500">
+    <div class="container mx-auto px-4">
+      <p><script id="LA-DATA-WIDGET" crossorigin="anonymous" charset="UTF-8" src="https://v6-widget.51.la/v6/Kg8KQJs3VUpgJFYj/quote.js?theme=, ,#F5F5F7,#F5F5F7,,,14&f=14&display=0,1,0,0,0,0,0,1"></script></p>
+      <p>本服务仅提供中文维基百科的反向代理访问，所有内容版权归维基媒体基金会所有</p>
+      <p>本站对争议保留内容持审慎态度，不代表本站立场</p>
+      <p>联合库UNHub （杖雍皓）保留所有权利</p>
+      <p>联系邮箱 : <a href="mailto:wikipedia@zyhorg.ac.cn" class="text-blue-400 hover:underline">wikipedia@zyhorg.ac.cn</a></p>
+      <p>UNHub Wikipedia 交流群 : 2158058819</p>
+      <p class="mt-1">© 2025 联合库UNHub 维基百科Wikipedia - 通过Cloudflare Workers技术实现</p>
+    </div>
+  </footer>
+
+  <script>
+// ========== 反馈弹窗（自动弹出） ==========
+const feedbackBackdrop = document.getElementById('feedback-modal-backdrop');
+const feedbackModal = document.getElementById('feedback-modal');
+
 function openFeedbackModal() {
-    modalBackdrop.classList.remove('hidden');
-    // 使用 setTimeout 延迟添加动画类，确保 backdrop 先显示
-    setTimeout(() => {
-        modal.classList.remove('scale-95', 'opacity-0');
-        modal.classList.add('scale-100', 'opacity-100');
-    }, 50);
+  feedbackBackdrop.classList.remove('hidden');
+  setTimeout(() => {
+    feedbackModal.classList.remove('scale-95', 'opacity-0');
+    feedbackModal.classList.add('scale-100', 'opacity-100');
+  }, 50);
 }
 
-// 关闭弹窗函数
 function closeFeedbackModal() {
-    modal.classList.remove('scale-100', 'opacity-100');
-    modal.classList.add('scale-95', 'opacity-0');
-    // 延迟隐藏 backdrop，等待动画结束
-    setTimeout(() => {
-        modalBackdrop.classList.add('hidden');
-    }, 300); // 300ms 应该匹配你的 CSS transition duration
+  feedbackModal.classList.remove('scale-100', 'opacity-100');
+  feedbackModal.classList.add('scale-95', 'opacity-0');
+  setTimeout(() => {
+    feedbackBackdrop.classList.add('hidden');
+  }, 300);
 }
 
-// 页面加载完成后，1秒后自动弹出
 window.addEventListener('load', () => {
-    setTimeout(() => {
-        // 只有当弹窗处于隐藏状态时才弹出，防止重复执行
-        if (modalBackdrop.classList.contains('hidden')) {
-            openFeedbackModal();
-        }
-    }, 1000); // 1秒延迟
+  setTimeout(() => {
+    if (feedbackBackdrop.classList.contains('hidden')) {
+      openFeedbackModal();
+    }
+  }, 1000);
 });
-</script>
-</body>
 
+// ========== 法律声明 + Turnstile 验证弹窗 ==========
+const visitButton = document.getElementById('visit-btn');
+const disclaimerBackdrop = document.getElementById('disclaimer-modal-backdrop');
+const disclaimerInput = document.getElementById('disclaimer-input');
+const confirmButton = document.getElementById('confirm-btn');
+const turnstileContainer = document.getElementById('turnstile-container');
+
+// 你的 Turnstile Site Key
+const TURNSTILE_SITE_KEY = "0x4AAAAAACE3oo6ALuG1WHSf"; // 👈 替换为你自己的 Site Key！
+
+visitButton.addEventListener('click', () => {
+  disclaimerBackdrop.classList.remove('hidden');
+});
+
+disclaimerInput.addEventListener('input', () => {
+  confirmButton.disabled = disclaimerInput.value.trim() !== '我明白法律风险，我自愿承担一切后果';
+});
+
+// 显示 Turnstile 验证器
+function showTurnstile() {
+  if (disclaimerInput.value.trim() !== '我明白法律风险，我自愿承担一切后果') return;
+
+  // 显示 Turnstile 容器
+  turnstileContainer.classList.remove('hidden');
+
+  // 渲染 Turnstile 验证器
+  turnstile.render('#cf-turnstile', {
+    sitekey: TURNSTILE_SITE_KEY,
+    theme: 'light',
+    callback: function(token) {
+      // 验证成功，执行跳转
+      proceedToWikipedia(token);
+    },
+    'error-callback': function(error) {
+      console.error("Turnstile 验证失败:", error);
+      alert("人机验证失败，请重试。");
+      // 可选：重置 Turnstile
+      turnstile.reset('#cf-turnstile');
+    }
+  });
+
+  // 隐藏“继续访问”按钮，避免重复点击
+  confirmButton.style.display = 'none';
+}
+
+// 执行跳转（带验证 Token）
+function proceedToWikipedia(token) {
+  // 这里你可以选择将 token 发送到后端进行二次验证（更安全）
+  // 但作为个人项目，前端验证通常已足够
+  window.open('https://wikipedia.zyhorg.ac.cn/', '_blank');
+  closeDisclaimerModal();
+}
+
+function closeDisclaimerModal() {
+  disclaimerBackdrop.classList.add('hidden');
+  disclaimerInput.value = '';
+  confirmButton.disabled = true;
+  confirmButton.style.display = 'block'; // 重新显示按钮
+  turnstileContainer.classList.add('hidden'); // 隐藏验证器
+  // 重置 Turnstile
+  try {
+    turnstile.reset('#cf-turnstile');
+  } catch(e) {}
+}
+  </script>
+</body>
 </html>
 
 
