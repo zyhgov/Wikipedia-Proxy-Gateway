@@ -1,3 +1,49 @@
+// ========== 维护横幗循环展示 ==========
+const bannerMessages = [
+  '系统正在升级维护，服务暂时不可用，敬请谅解！',
+  '我们的 Cloudflare Worker 免费服务已达到请求上限，现在进行系统升级以优化性能。',
+  '升级完成后，您将获得更快更稳定的访问体验。',
+  '想及时了解恢复时间？欢迎加入 UNHub Wikipedia QQ 交流群：2158058819',
+  '感谢您的耐心等待与支持！'
+];
+
+let currentMessageIndex = 0;
+const bannerTextElement = document.getElementById('banner-text');
+
+function updateBannerText() {
+  if (bannerTextElement) {
+    // 移除旧的动画类
+    bannerTextElement.style.animation = 'none';
+    // 重新触发重排以重启动画
+    void bannerTextElement.offsetHeight;
+    bannerTextElement.textContent = bannerMessages[currentMessageIndex];
+    bannerTextElement.style.animation = 'fadeInOut 6s ease-in-out';
+    
+    // 移动到下一条消息
+    currentMessageIndex = (currentMessageIndex + 1) % bannerMessages.length;
+  }
+}
+
+// 初始化并每6秒更新一次
+updateBannerText();
+setInterval(updateBannerText, 6000);
+
+// ========== 系统维护标志 ==========
+// 设置为 true 时显示维护弹窗，false 时恢复法律声明弹窗
+let isUnderMaintenance = true;
+
+// ========== 维护弹窗控制 ==========
+const maintenanceModalBackdrop = document.getElementById('maintenance-modal-backdrop');
+
+function openMaintenanceModal() {
+  maintenanceModalBackdrop.classList.remove('hidden');
+}
+
+function closeMaintenanceModal() {
+  // 维护中可以关闭弹窗
+  maintenanceModalBackdrop.classList.add('hidden');
+}
+
 // ========== 反馈弹窗（自动弹出） ==========
 const feedbackBackdrop = document.getElementById('feedback-modal-backdrop');
 const feedbackModal = document.getElementById('feedback-modal');
@@ -37,6 +83,12 @@ const turnstileContainer = document.getElementById('turnstile-container');
 const TURNSTILE_SITE_KEY = "0x4AAAAAACE3oo6ALuG1WHSf";
 
 visitButton.addEventListener('click', () => {
+  // 如果系统在维护中，显示维护弹窗
+  if (isUnderMaintenance) {
+    openMaintenanceModal();
+    return;
+  }
+  // 否则显示法律声明
   disclaimerBackdrop.classList.remove('hidden');
 });
 
@@ -90,3 +142,66 @@ function closeDisclaimerModal() {
     turnstile.reset('#cf-turnstile');
   } catch(e) {}
 }
+
+// ========== 系统维护控制函数 ==========
+// 调用此函数来恢复系统（取消维护状态）
+window.resumeService = function() {
+  isUnderMaintenance = false;
+  
+  // 隐藏维护横幗
+  const maintenanceBanner = document.getElementById('maintenance-banner');
+  if (maintenanceBanner) {
+    maintenanceBanner.style.display = 'none';
+  }
+  
+  // 隐藏维护弹窗
+  maintenanceModalBackdrop.classList.add('hidden');
+  
+  // 恢复按钮样式
+  visitButton.className = 'tech-button bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-500 hover:to-purple-500 text-white font-semibold py-4 px-8 rounded-xl flex items-center shadow-lg hover:shadow-2xl transform hover:scale-105 transition-all duration-300 group';
+  
+  // 更改按钮文字
+  visitButton.innerHTML = '<svg class="w-5 h-5 mr-2 group-hover:rotate-12 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"></path></svg><span class="text-lg">立即访问</span>';
+  
+  // 更新服务状态
+  const statusIndicator = document.getElementById('status-indicator');
+  const statusText = document.getElementById('status-text');
+  if (statusIndicator) {
+    statusIndicator.className = 'w-3 h-3 rounded-full bg-green-500 mr-3';
+  }
+  if (statusText) {
+    statusText.textContent = '服务状态：正常运行中';
+  }
+  
+  alert('🎉 系统维护完成，服务已恢复！');
+};
+
+// 调用此函数来启用维护状态
+window.enableMaintenance = function() {
+  isUnderMaintenance = true;
+  
+  // 显示维护横幗
+  const maintenanceBanner = document.getElementById('maintenance-banner');
+  if (maintenanceBanner) {
+    maintenanceBanner.style.display = 'block';
+  }
+  
+  // 显示维护弹窗
+  openMaintenanceModal();
+  
+  // 更改按钮样式
+  visitButton.className = 'tech-button bg-gradient-to-r from-gray-600 to-gray-500 text-white font-semibold py-4 px-8 rounded-xl flex items-center shadow-lg cursor-not-allowed opacity-60 transition-all duration-300';
+  
+  // 更改按钮文字
+  visitButton.innerHTML = '<svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4m0 4v.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg><span class="text-lg">系统维护中</span>';
+  
+  // 更新服务状态
+  const statusIndicator = document.getElementById('status-indicator');
+  const statusText = document.getElementById('status-text');
+  if (statusIndicator) {
+    statusIndicator.className = 'w-3 h-3 rounded-full bg-orange-500 mr-3';
+  }
+  if (statusText) {
+    statusText.textContent = '服务状态：系统维护中';
+  }
+};
