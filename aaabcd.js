@@ -65,6 +65,14 @@ function closeFeedbackModal() {
 }
 
 window.addEventListener('load', () => {
+  // 根据 isUnderMaintenance 初始化 UI
+  if (isUnderMaintenance) {
+    window.enableMaintenance();
+  } else {
+    window.resumeService();
+  }
+  
+  // 显示反馈弹窗
   setTimeout(() => {
     if (feedbackBackdrop.classList.contains('hidden')) {
       openFeedbackModal();
