@@ -127,7 +127,7 @@ function showTurnstile() {
 function proceedToWikipedia(token) {
   // 这里你可以选择将 token 发送到后端进行二次验证（更安全）
   // 但作为个人项目，前端验证通常已足够
-  window.open('https://wikipedia.zyhorg.ac.cn/', '_blank');
+  window.open('https://wikipedia.unhub.dpdns.org/', '_blank');
   closeDisclaimerModal();
 }
 
