@@ -30,7 +30,7 @@ setInterval(updateBannerText, 6000);
 
 // ========== 系统维护标志 ==========
 // 设置为 true 时显示维护弹窗，false 时恢复法律声明弹窗
-let isUnderMaintenance = true;
+let isUnderMaintenance = false;
 
 // ========== 维护弹窗控制 ==========
 const maintenanceModalBackdrop = document.getElementById('maintenance-modal-backdrop');
