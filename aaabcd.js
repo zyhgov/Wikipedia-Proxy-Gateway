@@ -88,7 +88,7 @@ const confirmButton = document.getElementById('confirm-btn');
 const turnstileContainer = document.getElementById('turnstile-container');
 
 // 你的 Turnstile Site Key
-const TURNSTILE_SITE_KEY = "0x4AAAAAACE3oo6ALuG1WHSf";
+const TURNSTILE_SITE_KEY = "0x4AAAAAACOG2woq5SgjjXtW";
 
 visitButton.addEventListener('click', () => {
   // 如果系统在维护中，显示维护弹窗
