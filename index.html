@@ -30,6 +30,8 @@
     
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="/style.css">
+    <!-- Canvas Confetti 库 -->
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.0/dist/confetti.browser.min.js"></script>
 	  <!-- Turnstile 验证 SDK -->
 <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
 <!-- Clarity tracking code for https://wikipedia.zyhorg.cn/ -->
@@ -88,6 +90,14 @@
   </style>
   <div id="maintenance-banner" class="w-full text-white py-4 font-semibold shadow-lg border-b-2 border-yellow-500">
     <span id="banner-text" class="banner-text">🔧 系统正在升级维护，服务暂时不可用，敬请谅解！</span>
+  </div>
+
+  <!-- ✅ 维基百科25周年纪念横幅 -->
+  <div id="anniversary-banner" class="w-full bg-gradient-to-r from-blue-600 to-blue-800 text-white py-4 px-4 shadow-lg border-b-2 border-blue-400 cursor-pointer hover:from-blue-500 hover:to-blue-700 transition-all duration-300" onmouseover="triggerConfetti()" onclick="triggerConfetti()">
+    <div class="container mx-auto flex items-center justify-center gap-4">
+      <img src="https://cf-r2.zyhorg.ac.cn/images/1768459490950-abnbe7-zhwiki-25.svg" alt="维基百科25周年纪念" class="h-12 object-contain">
+      <span class="text-3xl font-bold">Wikipedia维基百科 共庆25周年</span>
+    </div>
   </div>
 
   <header class="py-6 border-b border-gray-800">
@@ -388,7 +398,7 @@
       <p>本服务仅提供中文维基百科的反向代理访问，所有内容版权归维基媒体基金会所有</p>
       <p>本站对争议保留内容持审慎态度，不代表本站立场</p>
       <p>UNHub Wikipedia 交流群 : 2158058819</p>
-      <p class="mt-1">© 2025 联合库UNHub 维基百科Wikipedia</p>
+      <p class="mt-1">© 2026 联合库UNHub 维基百科Wikipedia</p>
     </div>
   </footer>
 <script src="/aaabcd.js"></script>
