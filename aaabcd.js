@@ -8,6 +8,29 @@ const bannerMessages = [
 ];
 
 let currentMessageIndex = 0;
+
+// ========== 彩带庆祝效果 ==========
+let confettiTimeout;
+
+function triggerConfetti() {
+  // 防止频繁触发
+  if (confettiTimeout) return;
+  
+  // 触发彩带效果
+  if (typeof confetti !== 'undefined') {
+    confetti({
+      particleCount: 150,
+      spread: 100,
+      origin: { y: 0.2 },
+      colors: ['#4f46e5', '#0891b2', '#06b6d4', '#0ea5e9', '#3b82f6']
+    });
+  }
+  
+  // 延迟后允许再次触发
+  confettiTimeout = setTimeout(() => {
+    confettiTimeout = null;
+  }, 800);
+}
 const bannerTextElement = document.getElementById('banner-text');
 
 function updateBannerText() {
@@ -88,7 +111,7 @@ const confirmButton = document.getElementById('confirm-btn');
 const turnstileContainer = document.getElementById('turnstile-container');
 
 // 你的 Turnstile Site Key
-const TURNSTILE_SITE_KEY = "0x4AAAAAACOG2woq5SgjjXtW";
+const TURNSTILE_SITE_KEY = "0x4AAAAAACE3oo6ALuG1WHSf";
 
 visitButton.addEventListener('click', () => {
   // 如果系统在维护中，显示维护弹窗
@@ -180,8 +203,6 @@ window.resumeService = function() {
   if (statusText) {
     statusText.textContent = '服务状态：正常运行中';
   }
-  
-  alert('🎉 系统维护完成，服务已恢复！');
 };
 
 // 调用此函数来启用维护状态
